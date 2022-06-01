@@ -3,7 +3,7 @@ const fs = require('fs');
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager")
-const makeHTML = require('./lib/createHTML')
+const createHTML = require('./lib/createHTML')
 
 
 const employees = []
@@ -64,13 +64,16 @@ const createEmployee = () => {
             const engineer = new Engineer (name, id, email, github)
             console.log(engineer.getGithub())
             employees.push(engineer)
+           // return createEngineer()
         } else if (role === "Intern"){
             const intern = new Intern (name, id, email, school)
             employees.push(intern)
+           // return createIntern()
         }
-        else {
+        else if (role === "Manager"){
             const manager = new Manager (name, id, email, officeNumber)
             employees.push(manager)
+          //  return createManager()
         }
         if (addMore === "Yes"){
             return createEmployee()
@@ -82,25 +85,10 @@ const createEmployee = () => {
 
 
 
-const writefile = data => {
-    fs.writeFile('./dist/index.html', data, err => {
-        if (err){
-            console.err("Error. Please try again")
-            console.err(err)
-            return
-        }else{
-            console.log("Success! Please find your team info under 'index.html'")
-        }
-    })
-}
+createEmployee ()
+        .then((data) =>
+        fs.writeFile("./index.html", "", createHTML(data),
+        (err) =>
+            err ? console.error(err) : console.log('Team Members generated!')))        
+    
 
-createEmployee()
-    .then(employees => {
-        return makeHTML(employees)
-    })
-    .then( employeehtml => {
-        return writefile(employees)
-    })
-    .catch(err => {
-        console.log(err)
-    })
