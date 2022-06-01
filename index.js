@@ -58,8 +58,8 @@ const createEmployee = () => {
         }
     
     ])
-    .then(employeeDetails => {
-        const {name, id, email, role, github, school, officeNumber, addMore} = employeeDetails
+    .then(data => {
+        const {name, id, email, role, github, school, officeNumber, addMore} = data
         if (role === "Engineer"){
             const engineer = new Engineer (name, id, email, github)
             console.log(engineer.getGithub())
