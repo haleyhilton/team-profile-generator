@@ -4,6 +4,11 @@ function createHTML(employeeList) {
     let card = `   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">${e.name}</h5>
+      <p> ${e.role} </p><br>
+      <p> ${e.id} </p><br>
+      <p> ${e.email} </p><br>
+      <p> ${e.id} </p><br>
+      <p> ${e.github} </p><br>      
       <p class="card-text"></p>
     </div>
   </div>` //bootstrap formatting 
@@ -19,8 +24,9 @@ function createHTML(employeeList) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
+    <div style="text-align:center">
     ${employeeCards}
-
+    </div>
     </body>
     </html>
     `
