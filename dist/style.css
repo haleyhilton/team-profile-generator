@@ -1,0 +1,25 @@
+:root{
+background-color: white;
+}
+
+.container{
+    text-align: center;
+    display: flex;
+    padding: 10%;
+    justify-content: center;
+}
+
+
+.card-title{
+border: 2px solid grey;
+background-color: white;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.card-body{
+    padding: 20px;
+    border: 1px solid black;
+    margin: 5%;
+    background-color: blanchedalmond;
+    
+}

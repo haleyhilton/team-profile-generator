@@ -59,28 +59,25 @@ const createEmployee = () => {
         ])
         .then(data => {
             const {
+                role,
                 name,
                 id,
                 email,
-                role,
                 github,
                 school,
                 officeNumber,
                 addMore
             } = data
             if (role === "Engineer") {
-                const engineer = new Engineer(name, id, email, github)
+                const engineer = new Engineer(name, role, id, email, github)
                 console.log(engineer.getGithub())
                 employees.push(engineer)
-                // return createEngineer()
             } else if (role === "Intern") {
-                const intern = new Intern(name, id, email, school)
+                const intern = new Intern(name, role, id, email, school)
                 employees.push(intern)
-                // return createIntern()
             } else if (role === "Manager") {
-                const manager = new Manager(name, id, email, officeNumber)
+                const manager = new Manager(name, role, id, email, officeNumber)
                 employees.push(manager)
-                //  return createManager()
             }
             if (addMore === "Yes") {
                 return createEmployee()
