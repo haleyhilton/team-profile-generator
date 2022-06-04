@@ -6,13 +6,13 @@ const testSchool = "UCSD"
 
 
 test("Employee object created", () => {
-        const intern = new Intern(testName, testEmail, testID, testSchool);
+        const intern = new Intern(testName, testID, testEmail, testSchool);
         expect(intern.school).toEqual(testSchool)
     });
 
-    test("intern.getGithub returns and parses string input", () => {
-        const intern = new Intern(testName, testEmail, testID, testSchool);
-        expect(intern.testEmail).toBe(testEmail);
+    test("intern.getGithub returns email", () => {
+        const intern = new Intern(testName, testID, testEmail, testSchool);
+        expect(intern.email).toEqual(testEmail);
     });
 
     test("engineer.getRole will assign and return Intern", () => {

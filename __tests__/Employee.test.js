@@ -15,12 +15,12 @@ test("Employee object created", () => {
     });
 
     test("e.getID will return any input number", () => {
-        const e = new Employee(testName, testEmail, testID);
+        const e = new Employee(testName, testID, testEmail);
         expect(e.getId()).toBe(testID);
     });
 
     test("e.getEmail will set return correct email", () => {
-        const e = new Employee(testName, testEmail, testID);
+        const e = new Employee(testName, testID, testEmail);
         expect(e.getEmail()).toBe(testEmail);
     });
 

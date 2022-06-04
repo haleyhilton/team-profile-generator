@@ -8,7 +8,7 @@ const testGithub = "michaelSCOTT1"
 
 test("Engineer github to return test github", () => {
         const engineer = new Engineer(testName, testEmail, testID, testGithub);
-        expect(engineer.github).toBe(expect.any(String));
+        expect(engineer.github).toBe('michaelSCOTT1');
 
     });
 
