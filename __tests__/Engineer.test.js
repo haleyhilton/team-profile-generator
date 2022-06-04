@@ -1,21 +1,23 @@
 const Engineer = require('../lib/Engineer')
+
 const testName = "Michael Scott"
 const testEmail = "ms@gmail.com"
 const testID = "1234"
+const testGithub = "michaelSCOTT1"
 
 
-test("Engineer object created", () => {
-        const engineer = new Engineer("Michael Scott", 45, "ms@gmail.com", "michaelSCOTT1");
-        expect(engineer.github).toEqual(expect.any(String));
+test("Engineer github to return test github", () => {
+        const engineer = new Engineer(testName, testEmail, testID, testGithub);
+        expect(engineer.github).toBe(expect.any(String));
 
     });
 
-    test("engineer.getGithub returns and parses string input", () => {
-        const engineer = new Engineer("Michael Scott", 45, "ms@gmail.com", "michaelSCOTT1");
-        expect(engineer.github).toEqual(expect.any(String));
+    test("engineer.getGithub function returns correct github", () => {
+        const engineer = new Engineer(testName, testEmail, testID, testGithub);
+        expect(engineer.getGithub()).toBe(testGithub);
     });
 
     test("engineer.getRole will assign and return Engineer", () => {
-        const engineer = new Engineer("Michael Scott", 45, "ms@gmail.com", "michaelSCOTT1");
-        expect(engineer.getRole()).toEqual("Engineer");
+        const engineer = new Engineer(testName, testEmail, testID, testGithub);
+        expect(engineer.getRole()).toBe("Engineer");
     });

@@ -11,20 +11,20 @@ test("Employee object created", () => {
     test("e.getName will set name", () => {
         const name = "Michael Scott";
         const e = new Employee(testName, testEmail, testID);
-        expect(e.getName()).toEqual(testName);
+        expect(e.getName()).toBe(testName);
     });
 
     test("e.getID will return any input number", () => {
         const e = new Employee(testName, testEmail, testID);
-        expect(e.getId()).toEqual(testID);
+        expect(e.getId()).toBe(testID);
     });
 
-    test("e.getEmail will set email string", () => {
+    test("e.getEmail will set return correct email", () => {
         const e = new Employee(testName, testEmail, testID);
-        expect(e.getEmail()).toEqual(testEmail);
+        expect(e.getEmail()).toBe(testEmail);
     });
 
     test("e.getRole will assign and return Employee", () => {
         const e = new Employee(testName, testEmail, testID);
-        expect(e.getRole()).toEqual("Employee");
+        expect(e.getRole()).toBe("Employee");
     });

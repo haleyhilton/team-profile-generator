@@ -1,30 +1,21 @@
-const Employee = require('../lib/Employee')
+const Intern = require('../lib/Intern')
 const testName = "Michael Scott"
 const testEmail = "ms@gmail.com"
 const testID = "1234"
+const testSchool = "UCSD"
 
 
 test("Employee object created", () => {
-        const e = new Employee(testName, testEmail, testID);
+        const intern = new Intern(testName, testEmail, testID, testSchool);
+        expect(intern.school).toEqual(testSchool)
     });
 
-    test("e.getName will set name", () => {
-        const name = "Michael Scott";
-        const e = new Employee(testName, testEmail, testID);
-        expect(e.getName()).toEqual(testName);
+    test("intern.getGithub returns and parses string input", () => {
+        const intern = new Intern(testName, testEmail, testID, testSchool);
+        expect(intern.testEmail).toBe(testEmail);
     });
 
-    test("e.getID will return any input number", () => {
-        const e = new Employee(testName, testEmail, testID);
-        expect(e.getId()).toEqual(testID);
-    });
-
-    test("e.getEmail will set email string", () => {
-        const e = new Employee(testName, testEmail, testID);
-        expect(e.getEmail()).toEqual(testEmail);
-    });
-
-    test("e.getRole will assign and return Employee", () => {
-        const e = new Employee(testName, testEmail, testID);
-        expect(e.getRole()).toEqual("Employee");
+    test("engineer.getRole will assign and return Intern", () => {
+        const intern = new Intern(testName, testEmail, testID, testSchool);
+        expect(intern.getRole()).toBe("Intern");
     });
