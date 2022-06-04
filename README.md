@@ -8,9 +8,10 @@ OOP: Team Profile Generator
   ## Description
 This is a command line input application that takes in information from the user and generates an HTML file with all input team profile information. 
 
-Options for selection include "Engineer", "Intern" and "Manager" which inherits classes from "Employee" - as well as adds further input contingent upon the role selected. Once all information is entered, an index.html file is generated with Bootstrap styling. 
+Options for selection include "Engineer", "Intern" and "Manager" which inherits classes from "Employee" - as well as adds further input contingent upon the role selected. Once all information is entered, an index.html file is generated with Bootstrap styling as well as external css. 
 
-Further updates will include validation for all information given to ensure accuracy. 
+Further updates will include validation for all information given to ensure accuracy and remove undefined. 
+
 
   # Table of Contents
 
@@ -38,7 +39,8 @@ Further updates will include validation for all information given to ensure accu
   ## Contribution Guidelines
   N/A Have Fun :)
   <a name="Screenshots"></a>    
-  ## Screenshots (if applicable)
+  ## Screenshots
+Link showing functionality, usage and final deployment [here](https://drive.google.com/file/d/16arFBMlkkpgegCTck0OmtqqD1lm69k5y/view)
   <a name="Questions"></a>
   ## Questions
   The author's preferred method of contact is: Email
